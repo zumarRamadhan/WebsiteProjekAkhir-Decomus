@@ -1,0 +1,116 @@
+.help-center-section {
+  font-family: "Poppins", sans-serif;
+  padding: 40px 100px;
+  background: linear-gradient(to bottom, #fff, #3673b51b);
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.help-center-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-title {
+  font-size: 36px;
+  color: #3674b5;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.help-subtitle {
+  font-size: 18px;
+  color: #555;
+}
+
+.faq-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3674b5;
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item.active {
+  box-shadow: 0 6px 20px rgba(54, 116, 181, 0.2);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.faq-toggle {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+  color: #3674b5;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  color: #555;
+  font-size: 16px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 20px 20px;
+}
+
+.help-cta {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-cta p{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.button-cta-help {
+  display: inline-block;
+  background-color: #3674b5;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button-cta-help:hover {
+  background-color: #295f9e;
+}

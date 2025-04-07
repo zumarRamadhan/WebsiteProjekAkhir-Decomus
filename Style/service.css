@@ -1,0 +1,176 @@
+.hero-section-service {
+  background-image: url(/Assets/background-service.png);
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title-hero-section {
+  position: absolute;
+  text-align: center;
+  margin: 0px 100px;
+  z-index: 99;
+}
+
+.title {
+  color: white;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: white;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.button-cta-hero {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: white;
+  color: #3674b5;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  animation: bounceUpDown 1.5s infinite ease-in-out;
+}
+
+.button-cta-hero:hover {
+  background-color: #3674b5;
+  color: white;
+}
+
+@keyframes bounceUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.desc-service {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.gallery-section {
+  padding: 0px 40px 100px;
+  background-color: #f9f9ff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 28px;
+  color: #3674b5;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.cta-section {
+  background-image: url('/Assets/background-cta.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-overlay {
+  padding: 60px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+  color: white;
+  max-width: 800px;
+}
+
+.cta-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.button-sta-section-cta {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #3674b5;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: bounceUpDown 1.5s infinite ease-in-out;
+}
+
+.button-sta-section-cta:hover {
+  background-color: #3674b5;
+  color: white;
+}
+
+@keyframes bounceUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
