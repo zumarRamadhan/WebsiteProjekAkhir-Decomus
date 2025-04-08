@@ -176,7 +176,7 @@ nav li .cta-button:hover {
 
 /* hero section */
 .hero-section {
-  background-image: url('./Assets/background-hero.png');
+  background-image: url('Assets/background-hero.png');
   height: 550px;
   display: flex;
   justify-content: center;
