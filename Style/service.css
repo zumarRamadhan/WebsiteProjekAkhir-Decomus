@@ -106,7 +106,7 @@
 
 
 .cta-section {
-  background-image: url('/Assets/background-cta.png');
+  background-image: url('../Assets/background-cta.png');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
