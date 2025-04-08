@@ -1,6 +1,6 @@
 .hero-section-service {
-  background-image: url('../Assets/background-service.png');
   height: 550px;
+  background-image: url('../Assets/background-service.png');
   display: flex;
   justify-content: center;
   align-items: center;
