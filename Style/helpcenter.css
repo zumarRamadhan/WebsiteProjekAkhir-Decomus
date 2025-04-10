@@ -114,3 +114,29 @@
 .button-cta-help:hover {
   background-color: #295f9e;
 }
+
+@media (max-width: 600px) {
+  .help-center-section {
+    padding: 40px 40px;
+  }
+
+  .help-title{
+    font-size: 20px;
+  }
+
+  .help-subtitle{
+    font-size: 16px;
+  }
+
+  .faq-title{
+    font-size: 16px;
+  }
+
+  .faq-question{
+    font-size: 16px;
+  }
+
+  .help-cta p{
+    font-size: 16px;
+  }
+}

@@ -44,6 +44,17 @@ body{
   color: white;
 }
 
+.plan-badge {
+  background-color: white;
+  color: #3674b5;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 .plan-title {
   font-size: 20px;
   font-weight: 600;

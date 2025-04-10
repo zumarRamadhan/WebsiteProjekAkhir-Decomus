@@ -27,7 +27,7 @@
                 <li><a href="../Page/service.html">Layanan</a></li>
                 <li><a href="../Page/location.html">Lokasi</a></li>
                 <li><a href="../Page/helpcenter.html" class="active">Pusat Bantuan</a></li>
-                <li><a href="#" class="cta-button">Hubungi Kami</a></li>
+                <li><a href="https://wa.me/6285338665359" class="cta-button">Hubungi Kami</a></li>
             </ul>
             <div class="nav-right">
                 <label for="menu-btn-nav" class="btn menu-btn-nav"><iconify-icon icon="pajamas:hamburger"
@@ -38,17 +38,17 @@
 
     <div class="help-center-section">
         <div class="help-center-header">
-            <h1 class="help-title">📞 Pusat Bantuan WashUp Laundry 📞</h1>
-            <p class="help-subtitle">
+            <h1 class="help-title zoom-in">📞 Pusat Bantuan WashUp Laundry 📞</h1>
+            <p class="help-subtitle fade-in-up">
                 Punya pertanyaan seputar layanan kami? Temukan jawaban cepat di sini!
             </p>
         </div>
 
         <div class="faq-container">
-            <div class="faq-title">Pertanyaan yang Sering Diajukan</div>
+            <div class="faq-title fade-in-up">Pertanyaan yang Sering Diajukan</div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Apa saja jenis layanan yang tersedia?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Bagaimana cara menjadwalkan penjemputan?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Metode pembayaran apa yang diterima?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Berapa lama proses laundrynya?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -88,29 +88,31 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Haruskah saya memisahkan barang-barang cucian saya?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <b>Tidak perlu.</b> Tim kami akan memilah pakaian berdasarkan warna dan jenis bahan agar hasil cuci lebih
+                    <b>Tidak perlu.</b> Tim kami akan memilah pakaian berdasarkan warna dan jenis bahan agar hasil cuci
+                    lebih
                     optimal dan tidak rusak.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Apakah saya perlu menimbang pakaian saya sebelum diambil?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <b>Tidak perlu.</b> Karyawan kami akan membawa timbangan portable saat penjemputan dan langsung menimbang
+                    <b>Tidak perlu.</b> Karyawan kami akan membawa timbangan portable saat penjemputan dan langsung
+                    menimbang
                     di depan Anda.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Apakah kalian mencuci bajuku bersama dengan baju orang lain?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -121,7 +123,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <div class="faq-question fade-in-up">
                     <span>Bisakah Anda menjamin barang saya tidak akan rusak?</span>
                     <span class="faq-toggle">+</span>
                 </div>
@@ -131,13 +133,17 @@
                 </div>
             </div>
 
-            <div class="help-cta">
+            <div class="help-cta zoom-in">
                 <p>Masih belum menemukan jawaban?</p>
-                <a href="https://wa.me/6281234567890" class="button-cta-help">Hubungi CS Kami Sekarang</a>
+                <a href="https://wa.me/6285338665359" class="button-cta-help">Hubungi CS Kami Sekarang</a>
             </div>
 
         </div>
     </div>
+
+    <a href="https://wa.me/6285338665359" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <footer class="footer">
         <div class="footer-top">
@@ -149,7 +155,7 @@
                     <li><a href="../Page/service.html">Layanan</a></li>
                     <li><a href="../Page/location.html">Lokasi</a></li>
                     <li><a href="../Page/helpcenter.html">Pusat Bantuan</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="https://wa.me/6285338665359">Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>
@@ -164,6 +170,44 @@
             item.querySelector(".faq-question").addEventListener("click", () => {
                 item.classList.toggle("active");
             });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in-up");
+
+            function checkPosition() {
+                const triggerBottom = window.innerHeight * 0.9;
+
+                elements.forEach((el) => {
+                    const boxTop = el.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkPosition);
+            window.addEventListener("resize", checkPosition);
+
+            checkPosition(); // initial check
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const zoomElements = document.querySelectorAll(".zoom-in");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        // observer.unobserve(entry.target); // Optional: hanya animasi sekali
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            zoomElements.forEach(el => observer.observe(el));
         });
     </script>
 

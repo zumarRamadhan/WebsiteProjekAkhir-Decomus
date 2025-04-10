@@ -27,7 +27,7 @@
                 <li><a href="../Page/service.html">Layanan</a></li>
                 <li><a href="../Page/location.html" class="active">Lokasi</a></li>
                 <li><a href="../Page/helpcenter.html">Pusat Bantuan</a></li>
-                <li><a href="#" class="cta-button">Hubungi Kami</a></li>
+                <li><a href="https://wa.me/6285338665359" class="cta-button">Hubungi Kami</a></li>
             </ul>
             <div class="nav-right">
                 <label for="menu-btn-nav" class="btn menu-btn-nav"><iconify-icon icon="pajamas:hamburger"
@@ -37,29 +37,33 @@
     </nav>
 
     <div class="map-section">
-        <h2 class="map-title">Temukan Kami di Maps</h2>
+        <h2 class="map-title fade-in-up">Temukan Kami di Maps</h2>
         <div id="map"></div>
     </div>
 
+    <a href="https://wa.me/6285338665359" class="whatsapp-float zoom-in" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <div class="map-description">
-        <h3 class="desc-title">📍 Coverage Area WashUp Laundry <br> (Gratis Antar Jemput)</h3>
-        <p class="desc-subtitle">Layanan kami mencakup wilayah strategis di Kota Semarang:</p>
+        <h3 class="desc-title fade-in-up">📍 Coverage Area WashUp Laundry <br> (Gratis Antar Jemput)</h3>
+        <p class="desc-subtitle zoom-in">Layanan kami mencakup wilayah strategis di Kota Semarang:</p>
 
         <div class="coverage-columns">
             <div class="coverage-group">
-                <h4>🔼 Semarang Atas</h4>
+                <h4 class="fade-in-up">🔼 Semarang Atas</h4>
                 <ul>
-                    <li>Tembalang</li>
-                    <li>Gajah Mungkur</li>
-                    <li>Candisari</li>
+                    <li class="zoom-in">Tembalang</li>
+                    <li class="zoom-in">Gajah Mungkur</li>
+                    <li class="zoom-in">Candisari</li>
                 </ul>
             </div>
             <div class="coverage-group">
-                <h4>🔽 Semarang Bawah</h4>
+                <h4 class="fade-in-up">🔽 Semarang Bawah</h4>
                 <ul>
-                    <li>Pedurungan</li>
-                    <li>Citarum</li>
-                    <li>Semarang Tengah</li>
+                    <li class="zoom-in">Pedurungan</li>
+                    <li class="zoom-in">Citarum</li>
+                    <li class="zoom-in">Semarang Tengah</li>
                 </ul>
             </div>
         </div>
@@ -78,7 +82,7 @@
                     <li><a href="../Page/service.html">Layanan</a></li>
                     <li><a href="../Page/location.html">Lokasi</a></li>
                     <li><a href="../Page/helpcenter.html">Pusat Bantuan</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="https://wa.me/6285338665359">Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>
@@ -100,6 +104,44 @@
 
         const marker = L.marker(semarangCoords).addTo(map);
         marker.bindPopup("<b>WashUp Laundry</b><br>Kota Semarang").openPopup();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in-up");
+
+            function checkPosition() {
+                const triggerBottom = window.innerHeight * 0.9;
+
+                elements.forEach((el) => {
+                    const boxTop = el.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkPosition);
+            window.addEventListener("resize", checkPosition);
+
+            checkPosition(); // initial check
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const zoomElements = document.querySelectorAll(".zoom-in");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        // observer.unobserve(entry.target); // Optional: hanya animasi sekali
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            zoomElements.forEach(el => observer.observe(el));
+        });
     </script>
 
 </body>

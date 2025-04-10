@@ -36,10 +36,10 @@
         </div>
     </nav>
 
-    <section class="pricing-section-wrapper">
-        <p class="pricing-title">Pilihan Paket Kami</p>
+    <div class="pricing-section-wrapper">
+        <p class="pricing-title fade-in-up">Pilihan Paket Kami</p>
         <div class="pricing-section">
-            <div class="pricing-card">
+            <div class="pricing-card zoom-in">
                 <h3 class="plan-title">Reguler</h3>
                 <p class="plan-price">Rp10.000<span>/kg</span></p>
                 <p class="plan-desc">24 - 28 jam</p>
@@ -50,7 +50,8 @@
                 <button class="plan-button">Pilih Paket</button>
             </div>
 
-            <div class="pricing-card featured">
+            <div class="pricing-card featured zoom-in">
+                <div class="plan-badge">Rekomendasi</div>
                 <h3 class="plan-title">Express</h3>
                 <p class="plan-price">Rp14.000<span>/kg</span></p>
                 <p class="plan-desc">12 - 20 jam</p>
@@ -61,7 +62,7 @@
                 <button class="plan-button">Pilih Paket</button>
             </div>
 
-            <div class="pricing-card">
+            <div class="pricing-card zoom-in">
                 <h3 class="plan-title">Super Express</h3>
                 <p class="plan-price">Rp18.000<span>/kg</span></p>
                 <p class="plan-desc">6 - 8 jam</p>
@@ -72,26 +73,72 @@
                 <button class="plan-button">Pilih Paket</button>
             </div>
         </div>
+    </div>
+
+    <a href="https://wa.me/6285338665359" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <div class="logo-footer"><img src="../Assets/logo-black.png" alt="logo"></div>
+                <ul class="footer-nav">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="../Page/price.html">Harga</a></li>
+                    <li><a href="../Page/service.html">Layanan</a></li>
+                    <li><a href="../Page/location.html">Lokasi</a></li>
+                    <li><a href="../Page/helpcenter.html">Pusat Bantuan</a></li>
+                    <li><a href="https://wa.me/6285338665359">Hubungi Kami</a></li>
+                </ul>
+            </div>
         </div>
 
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-left">
-                    <div class="logo-footer"><img src="../Assets/logo-black.png" alt="logo"></div>
-                    <ul class="footer-nav">
-                        <li><a href="../index.html">Beranda</a></li>
-                        <li><a href="../Page/price.html">Harga</a></li>
-                        <li><a href="../Page/service.html">Layanan</a></li>
-                        <li><a href="../Page/location.html">Lokasi</a></li>
-                        <li><a href="../Page/helpcenter.html">Pusat Bantuan</a></li>
-                        <li><a href="#">Hubungi Kami</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>© 2025 WashUp Laundry. All rights reserved.</p>
+        </div>
+    </footer>
 
-            <div class="footer-bottom">
-                <p>© 2025 WashUp Laundry. All rights reserved.</p>
-            </div>
-        </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fade-in-up");
+
+            function checkPosition() {
+                const triggerBottom = window.innerHeight * 0.9;
+
+                elements.forEach((el) => {
+                    const boxTop = el.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkPosition);
+            window.addEventListener("resize", checkPosition);
+
+            checkPosition(); // initial check
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const zoomElements = document.querySelectorAll(".zoom-in");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        // observer.unobserve(entry.target); // Optional: hanya animasi sekali
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            zoomElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
+
 </html>
