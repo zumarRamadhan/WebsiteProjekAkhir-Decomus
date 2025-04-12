@@ -84,7 +84,7 @@ nav .wrapper-nav {
   position: absolute;
   left: 15px;
   top: 10px;
-  color: #3674b5;
+  color: white;
   font-size: 18px;
 }
 
@@ -280,6 +280,12 @@ nav li .cta-button:hover {
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: bounceUpDown 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .whatsapp-float{
+    font-size: 24px;
+  }
 }
 
 .fade-in-up {
