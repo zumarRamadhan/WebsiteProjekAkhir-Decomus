@@ -118,7 +118,7 @@
             window.addEventListener("scroll", checkPosition);
             window.addEventListener("resize", checkPosition);
 
-            checkPosition(); // initial check
+            checkPosition();
         });
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -128,7 +128,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("show");
-                        // observer.unobserve(entry.target); // Optional: hanya animasi sekali
                     }
                 });
             }, {

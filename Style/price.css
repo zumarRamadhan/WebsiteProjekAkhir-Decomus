@@ -11,6 +11,12 @@ body{
   flex-wrap: wrap;
 }
 
+@media (max-width: 550px) {
+  .pricing-section{
+    padding: 40px;
+  }
+}
+
 .pricing-card {
   background-color: #fff;
   border-radius: 16px;
